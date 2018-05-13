@@ -79,7 +79,7 @@ namespace ContactList.Controllers
             Description = "Created",
             Type = typeof(Contact))]
         [Route("~/contacts")]
-        public async Task<Contact> Post([FromBody] Contact contact)
+        public async Task<Contact> Post(Contact contact)
         {
             var contacts = await GetContacts();
             var contactList = contacts.ToList();
